@@ -1,31 +1,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>Surrey Concurrency Workshop and S-REPLS 2019</title>
+<title>University of Surrey Concurrency Workshop and S-REPLS 2019</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="index_files/bootstrap.min.css" rel="stylesheet">
   </head>
  
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item"> 
+      <a class="nav-link" href="#venue">Venue</a> 
+      </li> 
       <li class="nav-item">
         <a class="nav-link" href="#register">Register</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#venue">Venue</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#dates">Dates</a>
-      </li>
+      <!-- <li class="nav-item"> -->
+      <!--   <a class="nav-link" href="#dates">Dates</a> -->
+      <!-- </li> -->
       <li class="nav-item">
         <a class="nav-link" href="#schedule">Schedule</a>
       </li>
@@ -43,338 +42,44 @@
 </nav>
     
 <div class="jumbotron">
-  <h1>Surrey Concurrency Workshop and S-REPLS 2019</h1> 
-  <p> This two-day workshop aimed to bring together researchers, from the
-    UK and elsewhere, who are working on the theory of concurrency and programming languages.</p>
-  <div class="row">
-    <div class="col-sm">
-      <h4><a class="anchor" name="venue"></a>Venue</h4>
-      <a href="campusmap.pdf">Campus Map</a> 
-      Lecture Centre
-      University of Surrey 
-      Guildford
-    </div>
-    <div class="col-sm">
-      <h4><a class="anchor" name="dates"></a>Important dates</h4>
-      <p>The workshop will be taking place <strong>Tuesday 23 ‐ Wednesday 24 July, 2019</strong>.</p>
-    </div>
-  </div>	
+  <div class="display-4">Concurrency Workshop and S-REPLS 2019</div>
+  <div class="lead"><h2>University of Surrey, Guildford </h2></div>
+  <div class="lead"><h3>23‐24 July, 2019</h3></div>
+  <div class="mt-2"></div>
+  <hr class="my-4">
+    
+    <a class="anchor" name="venue">Please follow directions to the <a href="https://www.surrey.ac.uk/visit-university/how-get-here">Stag Hill Campus.</a> </a>
+
+    
+    <div><a class="btn btn-primary" href="campusmap.pdf" role="button">Campus Map</a> <a class="anchor" name="register"><a class="btn btn-success" href="" role="button">Register</a></a></div>
+    
 </div>
 
-
-<!--         <div class="col-sm-4"> -->
-<!-- 	  <h4><a class="anchor" name="register"></a>Watch online</h4> -->
-<!-- <p> <\!---A recording of the workshop is available on YouTube, both for <a href="https://www.youtube.com/watch?v=Ax_rvWzstHI">day -->
-<!-- 	    one</a> and for <a href="https://www.youtube.com/watch?v=nFUbeXMN3lk">day two</a>. --\-> </p> -->
-<!--     </div> -->
-
-    <div class="col-sm-12">&nbsp;</div>
-
-    <!---
-<div class="col-sm-8">
-  <h4><a class="anchor" name="talks"></a>Programme</h4>
- 
-  <dl>
-
-    <h4>Wednesday 15th July</h4>
-
-    <dt>12:00</dt><dd>Buffet lunch</dd>
-    
-    <dt>13:00</dt><dd>Welcome</dd>
-
-    <dt>13:10</dt><dd> Roland Meyer (U Kaiserslautern).&nbsp;&nbsp;<i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Roland-Meyer.pdf">Robustness
-against Relaxed Memory Models</a>.</i> <span class="abslink" id="talk6">Abstract</span><span class="abs" id="abs6">: For performance reasons, modern multiprocessors implement
-relaxed memory consistency models that admit out-of-program-order and
-non-store atomic executions.  While data race-free programs are not
-sensitive to these relaxations, they pose a serious problem to the
-development of the underlying concurrency libraries.  Library routines
-that work correctly under Sequential Consistency (SC) show undesirable
-effects when run under a relaxed memory model.  These routines are not
-robust against the relaxations that the processor supports.  To
-enforce robustness, the programmer has to add safety net instructions
-to the code that control the hardware --- a task that has proven to be
-difficult, even for experts. We recently developed algorithms that
-check and, if necessary, enforce robustness against prominent relaxed
-memory models like TSO implemented in x86 processors and Power
-implemented in IBM architectures.  Given a program, our algorithms
-decide whether the actual behavior on the processor coincides with the
-SC semantics.  If this is not the case, they synthesize safety net
-instructions that enforce robustness.  When built into a compiler, our
-algorithms thus hide the relaxed memory model from the programmer and
-provide the illusion of Sequential Consistency.  In this talk, we
-motivate the robustness problem and explain how to reduce it to an
-emptiness problem for a new automaton model</span>. <a href="https://www.youtube.com/watch?v=Ax_rvWzstHI&amp;t=7m44s">Video</a>.</dd>
-    
-<dt>13:35</dt><dd>Julien Lange (Imperial).&nbsp;&nbsp;<i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Julien-Lange.pdf">From Communicating Machines to Graphical Choreographies</a>.</i> <span class="abslink" id="talk2">Abstract</span><span class="abs" id="abs2">: Graphical choreographies, or global graphs, are general multiparty
-session specifications featuring expressive constructs such as forking,
-merging, and joining for representing application-level protocols.
-Global graphs can be directly translated into modelling notations such
-as BPMN and UML.
-
-In this talk, I will present (i) an algorithm whereby a global graph can
-be constructed from asynchronous interactions represented by
-communicating finite-state machines (CFSMs); and (ii) a sound and
-complete characterisation of a subset of safe CFSMs from which global
-graphs can be constructed</span>. <a href="https://www.youtube.com/watch?v=Ax_rvWzstHI&amp;t=35m44s">Video</a>.</dd>
-
-<dt>14:20</dt> <dd>Uday Reddy (U Birmingham).&nbsp;&nbsp;<i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Uday-Reddy.pdf">Type theory of
-    processes: A beginning</a>.</i> <span class="abslink" id="talk5">Abstract</span><span class="abs" id="abs5">: Joint work with Claudio Hermida and Edmund
-Robinson</span>. <a href="https://www.youtube.com/watch?v=Ax_rvWzstHI&amp;t=1h43m25s">Video</a>.</dd>
-
-<dt>14:45</dt><dd>Carlo Spaccasassi (Trinity College Dublin).&nbsp;&nbsp;
-  <i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Carlo-Spaccasassi.pdf">Inferring Session Types in ML</a>.</i> <span class="abslink" id="talk16">Abstract</span><span class="abs" id="abs16">:
- We propose a method to extend ML with session types which requires 
-minimal typing annotations. Our approach uses a novel
-combination and extension of well-known techniques to separate the 
-underlying type system of ML from the typing of sessions. This
-two level approach gives rise to a straightforward inference algorithm 
-for session types, which leverages and complements ML's own
-type inference algorithm. Inference in our system is sound and complete 
-with respect to type checking, and type soundness
-guarantees a weak deadlock freedom property. We describe the inference
-algorithm by example, and state the main theorems</span>. <a href="https://www.youtube.com/watch?v=Ax_rvWzstHI&amp;t=1h54m15s">Video</a>.</dd>
+<div class="col-sm-6"> This two-day workshop is aimed at bringing together researchers, from the
+    UK and elsewhere, who are working on the theory of concurrency and programming languages. The event is free to attend thanks to funding from <a href="">VeTSS</a> and <a href="">the University of Surrey ACE</a>. </div>
 
 
-<dt>15:30</dt> <dd>Matt Windsor (U York).&nbsp;&nbsp;<i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Matt-Windsor.pdf">Verifying a Single-Producer Stack</a>.</i> <span class="abslink" id="talk17">Abstract</span><span class="abs" id="abs17">: I will talk about verifying the SP pool, a single-producer
-multi-consumer data-structure which forms part of Dodds et al.'s time-stamped
-stack. Various features of the SP pool make it challenging to verify,
-including a stack-like (but possibly not linearizable) specification,
-pervasive out-of-order node removal, and the presence of harmless
-data-races during node disposal. As well as describing my proof, which
-uses Svendsen and Birkedal's iCAP logic, I will discuss what we can
-  change to make similar proofs easier in future</span>. <a href="https://www.youtube.com/watch?v=Ax_rvWzstHI&amp;t=2h47m14s">Video</a>.</dd>
+ <!-- <div class="col-sm-12">&nbsp;</div> -->
 
-  <dt>15:55</dt> <dd>Tyler Sorensen (UCL/Imperial).&nbsp;&nbsp;<i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Tyler-Sorensen.pdf">An Empirical and
-Pragmatic Study of Weak Memory Behaviours on GPUs</a>.</i> <span class="abslink" id="talk3">Abstract</span><span class="abs" id="abs3">: Current
-multiprocessors implement weak memory models. That is, executions that
-do not correspond to an interleaving concurrent instructions are
-allowed. While much research has gone into weak memory models on
-traditional CPU systems, not much attention has been given to GPUs
-(graphics processing units). GPUs feature a memory and concurrency
-hierarchy unseen on traditional CPU systems which must be taken into
-account when reasoning about the memory model. In this talk, we will
-discuss our efforts to empirically investigate the memory model
-implemented on current GPUs and how the hierarchical system poses new
-and interesting challenges. We present a technique for testing GPU
-applications for weak memory bugs and show that we are able to observe
-undesirable outcomes in several case studies. Finally, we discuss
-methods of disallowing such behaviours and the associated performance
-  and power cost</span>. <a href="https://www.youtube.com/watch?v=Ax_rvWzstHI&amp;t=3h02m02s">Video</a>.</dd>
-
-<dt>16:40</dt> <dd>John Wickerson (Imperial).&nbsp;&nbsp;<i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/John-Wickerson.pdf">Overhauling SC atomics in C11
-  and OpenCL</a>.</i> <span class="abslink" id="talk1">Abstract</span><span class="abs" id="abs1">: To be confirmed</span>. <a href="https://www.youtube.com/watch?v=Ax_rvWzstHI&amp;t=3h45m50s">Video</a>.</dd>
-  
-<dt>17:05</dt> <dd>Mike Dodds (U York).&nbsp;&nbsp;<i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Mike-Dodds.pdf">Compositional C11 Program Transformation</a>.</i> <span class="abslink" id="talk7">Abstract</span><span class="abs" id="abs7">: One objective for language-level relaxed
-  memory models is to support program transformations - i.e. compiler
-  optimisations. However, it's extremely subtle to calculate which
-  transformations are valid. This talk is about a theory for program
-  transformations on the C11 relaxed model. Our theory is
-  compositional: for each transformation, a limited number of
-  executions represent all interactions with the context. To express
-  these interactions, we use a partially-ordered record called a
-  history (the set of histories could be seen as a kind of
-  denotation). Our theory builds on ideas from C11 library
-  abstraction: replacing a specification with an implementation is one
-  instance of program transformation. This work is still in progress,
-  but we already cover the core of the C11 model and many important
-  transformations</span>. <a href="https://www.youtube.com/watch?v=Ax_rvWzstHI&amp;t=4h15m30s">Video</a>.</dd>
-
-<dt>17:45</dt><dd>Post-workshop pub trip. Workshop participants might like to go to the
-  <a href="https://www.google.co.uk/maps/place/Beit+Quadrangle,+Imperial+College+Union,+Prince+Consort+Rd,+Kensington,+London+SW7+2BB">Imperial College Union bar</a>, on Prince Consort Road, London SW7 2BB.</dd>
-  
-  <dt>19:00</dt><dd>Dinner at <a href="https://plus.google.com/103442571595657419945/about?hl=en">Med
-  Kitchen</a>, 35 Gloucester Road, London SW7 4PL. This will cost £20 per
-    person, excluding drinks; please pay for yourselves.</dd>
-
-<h4>Thursday 16th July</h4>
-    
-<dt>09:00</dt><dd>Julian Sutherland (Imperial).&nbsp;&nbsp;<i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Julian-Sutherland.pdf">Total-TaDA: Extending TaDA with total correctness</a>.</i> <span class="abslink" id="talk13">Abstract</span><span class="abs" id="abs13">: Total-TaDA is a new program logic for verifying the total correctness of concurrent programs. 
-The constraints necessary on a thread’s concurrent environment to guarantee its termination 
-can be specified using Total-TaDA. This allows us to verify total correctness for non-blocking 
-algorithms. This approach is modular, the operations of a module can be verified independently,
-and modules can be build up on top of each other</span>. <a href="https://www.youtube.com/watch?v=nFUbeXMN3lk&amp;t=8m13s">Video</a>.</dd>
-
-<dt>09:25</dt><dd>Gian Ntzik (Imperial).&nbsp;&nbsp;<i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Gian-Ntzik.pdf">Formally Specifying
-  POSIX File Systems</a>.</i> <span class="abslink" id="talk15">Abstract</span><span class="abs" id="abs15">: File system operations exhibit complex behaviour: they perform multiple actions
-affecting different parts of the state. This is further exacerbated when
-the operations are used concurrently. POSIX is a standard for operating
-systems, with a substantial part devoted to specifying file system
-operations. The specification is given in English, contains ambiguities
-and is generally under-specified with respect to concurrent
-behaviour. Therefore, it is not clear what clients may expect and what
-implementations must do.  We extend modern concurrent program logics
-with a novel formalism for specifying multiple actions performed by an
-operation, which may be atomic, non-atomic or a combination of both, and
-give proof rules for client and implementation reasoning. With this
-formalism we give a formal specification to a common fragment of POSIX
-file system operations, and reason about clients such as lock files and
-an implementation of half-duplex pipes</span>. <a href="https://www.youtube.com/watch?v=nFUbeXMN3lk&amp;t=32m51s">Video</a>.</dd>
-
-<dt>10:10</dt><dd>Hongseok Yang (U Oxford).&nbsp;&nbsp;<i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Hongseok-Yang.pdf">'Cause I'm Strong Enough: Reasoning about Consistency Choices in Distributed Systems</a>.</i> <span class="abslink" id="talk9">Abstract</span><span class="abs" id="abs9">: Large-scale distributed systems often rely on replicated databases that allow a
-programmer to request different data consistency guarantees for different
-operations, and thereby control their performance. Using such databases is far
-from trivial: requesting stronger consistency in too many places may hurt
-performance, and requesting it in too few places may violate correctness. To
-help programmers in this task, we propose the first proof rule for establishing
-that a particular choice of consistency guarantees for various operations on a
-replicated database is enough to ensure the preservation of a given data
-integrity invariant. Our rule is modular: it allows reasoning about the
-behaviour of every operation separately under some assumption on the behaviour
-of other operations. This leads to simple reasoning, which we have automated in
-an SMT-based tool. We present a nontrivial proof of soundness of our rule and
-illustrate its use on several examples.
-
-This is joint work with Alexey Gotsman (IMDEA, Spain), Carla Ferreira
-(Universidade Nova Lisboa), Mahsa Najafzadeh (UPMC &amp; INRIA), and
-Marc Shapiro (UPMC &amp; INRIA)</span>. <a href="https://www.youtube.com/watch?v=nFUbeXMN3lk&amp;t=1h17m30s">Video</a>.</dd>
-
-<dt>10:35</dt><dd>Giovanni Bernardi (IMDEA).&nbsp;&nbsp;<i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Giovanni-Bernardi.pdf">Robustness for Parallel Snapshot Isolation</a>.</i> <span class="abslink" id="talk10">Abstract</span><span class="abs" id="abs10">: Modern distributed systems often rely on databases that achieve
-scalability by providing only weak guarantees about the consistency
-of data - i.e. weak consistency levels.
-In these databases executions may happen, which are not serialisable,
-thus one problem is to understand whether a given transactional application
-performs <i>only</i> serialisable executions.
-
-In this talk first we define formally Parallel Snapshot Isolation (PSI), 
-a consistency level fit for geo-replicated databases,
-that appeared recently in the literature.
-Afterwards we sketch a robustness criterion for PSI,
-that is a condition to check whether a transactional
-application generates only serialisable executions,
-even if ran over a database implementing PSI</span>. <a href="https://www.youtube.com/watch?v=nFUbeXMN3lk&amp;t=1h42m32s">Video</a>.</dd>
-
-<dt>11:20</dt> <dd>Artem Khyzha (IMDEA/MSR).&nbsp;&nbsp; <i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Artem-Khyzha.pdf">A Generic Logic
-for Proving Linearizability</a>.</i> <span class="abslink" id="talk11">Abstract</span><span class="abs" id="abs11">: Linearizability is a commonly
-accepted notion of correctness for libraries of concurrent algorithms,
-and recent years have seen a number of proposals of program logics for
-proving it.  Although these logics differ in technical details, they
-embody similar reasoning principles. In our ongoing work we aim to
-explicate these principles and propose a logic for proving
-linearizability that is generic: it can be instantiated with different
-means of compositional reasoning about concurrency, such as separation
-logic or rely-guarantee. In this talk, I will present a generalisation
-of the Views framework for reasoning about concurrency to handle
-relations between programs, required for proving linearizability. This
-is joint work with Alexey Gotsman (IMDEA) and Matthew Parkinson
-(MSR)</span>. <a href="https://www.youtube.com/watch?v=nFUbeXMN3lk&amp;t=2h45m50s">Video</a>.</dd>
-
-<dt>11:45</dt><dd>Gavin Lowe (U Oxford).&nbsp;&nbsp;<i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Gavin-Lowe.pdf">Testing for Linearizability</a>.</i> <span class="abslink" id="talk18">Abstract</span><span class="abs" id="abs18">: In this talk, I will argue that testing still has a role to play in validating
-concurrent datatypes.  Correctness of a concurrent datatype normally means
-linearizability.  So how does one test for linearizability?
-
-Our approach is to run several worker threads on the concurrent datatype,
-record the history of operation calls and returns, and then test whether that
-history is linearizable.  I will present three different algorithms for
-testing whether a recorded history is linearizable, plus an interesting
-combination of two of the algorithms.  I will give results of an experimental
-comparison, and also present evidence that the technique is effective at
-finding bugs</span>. <a href="https://www.youtube.com/watch?v=nFUbeXMN3lk&amp;t=2h50m10s">Video</a>.</dd>
-
-<dt>12:10</dt> <dd>Alex Summers (ETH Zurich).&nbsp;&nbsp;<i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Alex-Summers.pdf">Viper: Verification Infrastructure for Permission-based Reasoning</a>.</i> <span class="abslink" id="talk14">Abstract</span><span class="abs" id="abs14">:
- Modern verification techniques are becoming ever-more powerful and 
-sophisticated, and building tools to implement them is a time-consuming 
-and difficult task. Writing a new verifier to validate each on-paper 
-approach is impractical; for this reason intermediate verification 
-languages such as Boogie and Why3 have become popular over the last 
-decade for implementing research from a wide variety of domains, and 
-several mature tools used in industry have been built around this common
- tool stack.
-
-Reasoning approaches which orient around sophisticated partitioning and 
-organisation of the verification state (such as separation logics) have 
-typically been implemented in specialised tools, since the reasoning is 
-hard to map down to first-order automated reasoning. In practice (with 
-notable exceptions), this means that a rich variety of modern techniques
- have no corresponding tool support.
-
-In this talk, I will present the new Silver intermediate verification 
-language, which has been designed to facilitate the lightweight 
-implementation of a variety of modern methodologies for program 
-verification. In contrast to lower-level verification languages, Silver 
-provides native support for heap reasoning; modes of reasoning such as 
-concurrent separation logic, dynamic frames and 
-rely-guarantee/invariants can be simply encoded.
-
-Silver has been developed as part of the Viper project, which provides
-  two automated back-end verifiers for Silver programs. Since
-  releasing our software in September last year, it has been used for
-  (internal and external) projects to build tools for Java
-  verification, non-blocking concurrency reasoning, flow-sensitive
-  typing and reasoning about GPU and Linux kernel code</span>. <a href="https://www.youtube.com/watch?v=nFUbeXMN3lk&amp;t=3h18m5s">Video</a>.</dd>
-
-  <dt>12:45</dt><dd>Lunch at <a href="https://plus.google.com/114899620417401901423/about">Coco
-  Momo</a>, Gloucester Arcade, 25 Gloucester Rd, London SW7 4PL;
-  please pay for yourselves.</dd>
---->
-</dl>
-
-</div>
-
-
-<div class="col-sm-4">
-<!---
-  <h4>Participants</h4>
-Bernardo Toninho (Carnegie-Mellon) •
-Alex Summers (ETH Zurich) •
-Giovanni Bernardi (IMDEA) •
-Andrea Cerone (IMDEA) •
-Artem Khyzha (IMDEA/MSR) •
-John Wickerson (Imperial) •
-Philippa Gardner (Imperial) •
-Assel Altayeva (Imperial) •
-Nicholas Ng (Imperial) •
-Nobuko Yoshida (Imperial) •
-Gian Ntzik (Imperial) •
-Julien Lange (Imperial) •
-Juliana Franco (Imperial) •
-Ally Donaldson (Imperial) •
-Mark Wheelhouse (Imperial) •
-Dominic Orchard (Imperial) •
-Rumyana Neykova (Imperial) •
-Hristina Palikareva (Imperial) •
-Tony Field (Imperial) •
-Ray Hu (Imperial) •
-Thomas Wood (Imperial) •
-Weizhen Yang (Imperial) •
-Shale Xiong (Imperial) •
-César Prouté (Imperial) •
-Sophia Drossopoulou (Imperial) •
-Azalea Raad (Imperial) •
-Tyler Sorensen (Imperial/UCL) •
-Ralf Jung (MPI-SWS) •
-Matt Parkinson (MSR) •
-Dino Distefano (Queen Mary) •
-Edmund Robinson (Queen Mary) •
-Carlo Spaccasassi (Trinity College Dublin) •
-Vasileios Koutavas (Trinity College Dublin) •
-Thomas Dinsdale-Young (U Aarhus) •
-Dan Ghica (U Birmingham) •
-Uday Reddy (U Birmingham) •
-Alceste Scalas (U Cagliari) •
-Ali Sezgin (U Cambridge) •
-Jean Pichon (U Cambridge) •
-Peter Sewell (U Cambridge) •
-Timothy Jones (U Cambridge) •
-Ohad Kammar (U Cambridge) •
-John Reppy (U Chicago) •
-Charisee Chiw (U Chicago) •
-Roland Meyer (U Kaiserslautern) •
-Laura Bocchi (U Kent) •
-Scott Owens (U Kent) •
-Mark Batty (U Kent) •
-Cliff Jones (U Newcastle) •
-Nisansala Yatapanage (U Newcastle) •
-Andrius Velykis (U Newcastle) •
-Hongseok Yang (U Oxford) •
-Gavin Lowe (U Oxford) •
-Martin Berger (U Sussex) •
-Mike Dodds (U York) •
-Matt Windsor (U York) •
-Carsten Fuhs (UCL)-->
-</div>
-
- <div class="col-sm-12">&nbsp;</div>
-
+<div class="col-sm-6">
+  <h4><a class="anchor" name="schedule"></a>Schedule</h4>
+  TBD
+  <!---
+      <div class="col-sm-8">
+	<h4><a class="anchor" name="talks"></a>Programme</h4>
+	
+	<dl>
+	  
+	  <h4>Wednesday 15th July</h4>
+	  
+	  <dt>12:00</dt><dd>Buffet lunch</dd>
+	  
+	  <dt>13:00</dt><dd>Welcome</dd>
+	  
+	  <dt>13:10</dt><dd> author <i><a href="http://multicore.doc.ic.ac.uk/icw2015/Slides/Roland-Meyer.pdf">Title</a>.</i> <span class="abslink" id="talk6">Abstract</span><span class="abs" id="abs6">: Fill <a href="video">Video</a>.</dd>
+	  </div>	    --->
+</div>	  
+	  
 <div class="col-sm-6">
 <h4><a class="anchor" name="announcements"></a>Announcements</h4>
 <p> Further announcements about the workshop will be made via the <a href="http://www.jiscmail.ac.uk/CONCURRENCYWG">Concurrency Working
@@ -406,33 +111,32 @@ Carsten Fuhs (UCL)-->
 
 
 
-
+<div class="pt-3"></div>
 <div class="container-fluid">
   <h4><a class="anchor" name="previous"></a>Previous events</h4>
-  The 2019 iteration of the workshop brings together the Concurrency Workshop and S-REPLS.  Previous iterations of the workshops:
-  <br> <br>
-  <div class="row">
-    <div class="col-sm">
-      <h5>Concurrency workshop</h5>
-      <dt>Jul 2015</dt><dd><a href="http://multicore.doc.ic.ac.uk/icw2015/">Imperial Concurrency Workshop</a>, Imperial College London</dd>
-      <dt>Apr 2014</dt><dd><a href="http://www-users.cs.york.ac.uk/~miked/ycw2014/">York Concurrency Workshop</a>, University of York</dd>
-      <dt>Jul 2012</dt><dd><a href="http://www.cs.ox.ac.uk/people/hongseok.yang/ccw12/index.html">Oxford Concurrency Workshop</a>, University of Oxford</dd>
-      <dt>Apr 2011</dt><dd><a href="https://www.scss.tcd.ie/Vasileios.Koutavas/dcw2011/">Dublin Concurrency Workshop</a>, Trinity College Dublin</dd>
-      <dt>Jul 2010</dt><dd><a href="http://www-users.cs.york.ac.uk/~miked//ccw2010/index.html">Cambridge Concurrency Workshop</a>, University of Cambridge</dd>
-      <!-- <dt>Nov 2009</dt><dd>Northern Concurrency Workshop, University of Newcastle</dd> -->
-      <!-- <dt>Jan 2009</dt><dd><a href="http://tinyurl.com/QMConcurrency09">Concurrency Theory Workshop</a>, Queen Mary University of London</dd> -->
-    </div>
-    <div class="col-sm">
-      <h5>S-REPLS</h5>
-      <dt>Feb 2019</dt><dd><a href="https://sreplsevent2019.splashthat.com/">S-REPLS 11 Facebook</a>, London</dd>
-      <dt>Sep 2018</dt><dd><a href="http://www.dcs.bbk.ac.uk/~carsten/srepls10/">S-REPLS 10 Birkbeck</a>, London</dd>
-      <dt>May 2018</dt><dd><a href="http://users.sussex.ac.uk/~mfb21/srepls9/">S-REPLS 9 Sussex</a>, Brighton</dd>
-      <dt>Jan 2018</dt><dd><a href="https://soft-dev.org/events/srepls8/">S-REPLS 8 King's College</a>, London</dd>
-      <dt>Sep 2017</dt><dd><a href="https://warwick.ac.uk/fac/sci/dcs/events/srepls7/">S-REPLS 7 Warwick</a>, Warwick</dd>
+  <div class="pt-2">
+    <div class="row">
+      <div class="col-sm">
+	<h5 class="mb-1">Concurrency workshop</h5>
+	<dt>Jul 2015</dt><dd><a href="http://multicore.doc.ic.ac.uk/icw2015/">Imperial Concurrency Workshop</a>, Imperial College London</dd>
+	<dt>Apr 2014</dt><dd><a href="http://www-users.cs.york.ac.uk/~miked/ycw2014/">York Concurrency Workshop</a>, University of York</dd>
+	<dt>Jul 2012</dt><dd><a href="http://www.cs.ox.ac.uk/people/hongseok.yang/ccw12/index.html">Oxford Concurrency Workshop</a>, University of Oxford</dd>
+	<dt>Apr 2011</dt><dd><a href="https://www.scss.tcd.ie/Vasileios.Koutavas/dcw2011/">Dublin Concurrency Workshop</a>, Trinity College Dublin</dd>
+	<dt>Jul 2010</dt><dd><a href="http://www-users.cs.york.ac.uk/~miked//ccw2010/index.html">Cambridge Concurrency Workshop</a>, University of Cambridge</dd>
+	<!-- <dt>Nov 2009</dt><dd>Northern Concurrency Workshop, University of Newcastle</dd> -->
+	<!-- <dt>Jan 2009</dt><dd><a href="http://tinyurl.com/QMConcurrency09">Concurrency Theory Workshop</a>, Queen Mary University of London</dd> -->
+      </div>
+      <div class="col-sm">
+	<h5 class="mb-1">S-REPLS</h5>
+	<dt>Feb 2019</dt><dd><a href="https://sreplsevent2019.splashthat.com/">S-REPLS 11 Facebook</a>, London</dd>
+	<dt>Sep 2018</dt><dd><a href="http://www.dcs.bbk.ac.uk/~carsten/srepls10/">S-REPLS 10 Birkbeck</a>, London</dd>
+	<dt>May 2018</dt><dd><a href="http://users.sussex.ac.uk/~mfb21/srepls9/">S-REPLS 9 Sussex</a>, Brighton</dd>
+	<dt>Jan 2018</dt><dd><a href="https://soft-dev.org/events/srepls8/">S-REPLS 8 King's College</a>, London</dd>
+	<dt>Sep 2017</dt><dd><a href="https://warwick.ac.uk/fac/sci/dcs/events/srepls7/">S-REPLS 7 Warwick</a>, Warwick</dd>
+      </div>
     </div>
   </div>
 </div>
-
 
 
 
