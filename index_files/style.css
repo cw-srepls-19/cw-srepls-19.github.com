@@ -1,0 +1,31 @@
+h1,h2,h3,dt {
+    font-family: 'Computer Modern Sans', Helvetica, sans-serif;
+}
+
+/*a:visited { 
+    color: #9da8aa; 
+}*/
+
+h1.display-4 {
+    color: #17324c;
+    font-family: 'Cabin';
+}
+
+h2 {
+    color: #17324c;
+    font-family: 'Cabin';
+}
+h3 {
+    color: #005e89;
+}
+
+
+/*
+a:visited { 
+    color: #339999; 
+}
+a:active { 
+    color: #339999; 
+}
+*/
+
