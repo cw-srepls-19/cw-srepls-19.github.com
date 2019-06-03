@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<link href="index_files/bootstrap.min.css" rel="stylesheet"> </link>
+<link href="index_files/style.css" rel="stylesheet"> </link>
+<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet"></link>
+<script src="index_files/jquery.js"></script> 
+<script src="index_files/bootstrap.min.js"></script>
+
+    
+<h5 id="chockler">Gregory Chockler: Atomic Transaction Commit for Modern Data Store</h5>
+<p>
+Transaction commit protocols play a pivotal role in supporting scalability and availability guarantees of today's large-scale transactional databases. Their theoretical properties are traditionally captured and analysed through Atomic Commitment Problem (ACP), introduced by Gray in the early 70s. Roughly, ACP is concerned with ensuring all-or-nothing (atomicity) semantics for transactions (the 'A' in the famous ACID acronym). It is formulated as a one-shot agreement problem in which a single COMMIT or ABORT decision must be output for a given transaction depending on the COMMIT or ABORT votes provided by a collection of fail-prone sites holding the data objects involved in the transaction. We argue that ACP is too simplistic to adequately capture complexities of transaction commit in modern transactional data stores.  In particular, its one-shot nature ignores the fact that a decision to commit or abort an individual transaction is not taken in isolation, but rather influenced by how conflicts with other simultaneously executing transactions are handled by the concurrency control mechanism, which ensures the isolation of transactions - 'I' in ACID. The lack of a formal framework capturing such intricate interdependencies between mechanisms for atomicity and isolation in real-world databases makes it difficult to understand them and prove correct. We address this by proposing a new problem, called Transaction Certification Service (TCS), that formalises how the classical Two-Phase Commit (2PC) protocol interacts with concurrency control in many practical transaction processing systems in a way parametric in the isolation level provided. In contrast to ACP, TCS is a multi-shot problem in the sense that the outcome of a transaction must be justified by the entire history of the past transactions rather than a single set of input votes. We then use TCS to identify core algorithmic insights underlying transaction commit in several widely used transactional data stores (such as Google Spanner), and leverages these to develop a new fault-tolerant multi-shot transaction commit protocol. This protocol is theoretically optimal in terms of its time complexity, and can serve as a reference implementation for future systems. <br> 
+
+    Joint work with Alexey Gotsman, IMDEA Software Institute, Spain 
+</p>
+<br>
+
+<h5 id="dardha">Ornela Dardha: A New Linear Logic for Deadlock-Free Session-Typed Processes</h5>
+<p>
+The π-calculus, viewed as a core concurrent programming language, has been used as the target of much research on type systems for concurrency. In this paper we propose a new type system for deadlock- free session-typed π-calculus processes, by integrating two separate lines of work. The first is the propositions-as-types approach by Caires and Pfenning, which provides a linear logic foundation for session types and guarantees deadlock-freedom by forbidding cyclic process connections. The second is Kobayashi’s approach in which types are annotated with priorities so that the type system can check whether or not processes contain genuine cyclic dependencies between communication operations. We combine these two techniques for the first time, and define a new and more expressive variant of classical linear logic with a proof assign- ment that gives a session type system with Kobayashi-style priorities. This can be seen in three ways: (i) as a new linear logic in which cyclic structures can be derived and a Cycle-elimination theorem generalises Cut-elimination; (ii) as a logically-based session type system, which is more expressive than Caires and Pfenning’s; (iii) as a logical foundation for Kobayashi’s system, bringing it into the sphere of the propositions- as-types paradigm. 
+</p>
+<br>
+
+<h5 id="gibbons">Jeremy Gibbons: TBD</h5>
+<p>TBD</p>
+
+<br>
+
+<h5 id="liepelt">Vilem Liepelt: Resource-Oriented Programming with Graded Modal Types</h5>
+<p>
+  Linear types, derived from Girard's Linear Logic, provide a means to expose safeinterfaces to stateful protocols and language features, e.g. channels and filehandles. Data is delineated into two camps: unconstrained values which can beconsumed or discarded arbitrarily and 'resources' which must be used exactlyonce. Bounded Linear Logic (BLL) [1], allows tracking a more nuanced notion ofnonlinearity via the natural numbers semiring which is baked into its proofrules. Our system of Graded Modal Types generalises BLL by parameterising overthe resource algebra, thus allowing a wide array of analyses to be captured inthe type system.In this talk we will explore how graded modal types and linearity convenientlyextend our typical toolkit of parametric polymorphism and indexed types,allowing us to reason about pure and effectful programs in a novel,resource-oriented, manner. Session typed channels and mutable arrays are justtwo examples of programming idioms that can be provided in such a languagewithout having to give up safety and compositionality. We will see this inaction via Granule [2], our implementation of a functional language with a typesystem which supports all these features. <br>
+ 
+1. Girard, Scedrov, Scott (1992) <br>
+2. https://github.com/granule-project/granule"
+</p>
+<br>
+
+<h5 id="paviotti">Marco Paviotti: First Steps in Denotational Semantics for Weak Memory Concurrency</h5>
+<p>
+We present the first modular semantics for weak memory concurrency that avoids thin-air reads, and provides data-race free programs with sequentially consistent semantics (DRF-SC). We remove a major limitation on the usefulness of the standard DRF-SC result: race-free components behave according to sequential consistency, even when composed with racy code. Like others, we interpret programs as event structures with a set of relations. In contrast, our relations are not defined (only) for whole-program event structures, but instead are built up compositionally, following the structure of the program.
+
+We evaluate our semantics by running it on a set of key litmus test examples drawn from the literature on memory models for Java and C-like languages. These examples indicate that thin-air reads are forbidden, that locks provide usable synchronisation, and that our semantics supports compiler optimisations: one forbidden by a prior state-of-the-art model, and another performed by the Hotspot compiler yet (erroneously) forbidden by the Java memory model.
+</p>
+<br>
+
+<h5 id="lawrence">Jonathan Lawrence: Modelling and Verifying Concurrent Lock Free Data Types using CSP and FDR</h5>
+<p>
+This talk presents work in progress, comprising the modelling in CSP and verification using FDR, of lock-free designs for selected concurrent datatypes. The case studies are a list based stack and queue, and an array based stack, for which the implementations are characterised by requiring stamped items (pointers or data values) for correctness. The models exploit techniques from earlier security protocol verification work, which allow an infinite supply of distinct stamps to be modelled, and hence verified, using a finite set.
+</p>
+<br>
+
+<h5 id="noble">James Noble: Transient Typechecks are (Almost) Free </h5>
+<p>
+Transient gradual typing imposes run-time type tests that typically cause a linear slowdown in programs' performance. This performance impact discourages the use of type annotations because adding types to a program makes the program slower. A virtual machine can employ standard just-in-time optimizations to reduce the overhead of transient checks to near zero. These optimizations can give gradually-typed languages performance comparable to state-of-the-art dynamic languages, so programmers can add types to their code without affecting their programs' performance.
+</p>
+<br>
+
+<h5 id="moiseenko">Evgenii Moiseenko: Compilation Correctness from Event Structure Based Weak Memory Model </h5>
+<p>
+The problem of giving a formal semantics for a weak memory model of a high-level programming language is known to be challenging. Recently, Chakraborty & Vafeiadis proposed a new solution to this problem [1]. Their model called WeakestMO defines the semantics of a concurrent program as an event structure. The event structure is a graph, that encodes all possible executions of a program. For a weak memory model of a programming language to be use- ful, several results about this model should be established. One of them is the presence of an effective compilation scheme from high- level language to the low-level assembly languages of modern hardware architectures. Chakraborty & Vafeiadis have provided only pen and paper proofs of compilation correctness for a weaker version of their model. Our work is dedicated to the mechanization of WeakestMO model, together with compilation correctness arguments, using the Coq proof assistant. We have proven the correctness of compilation to x86, ARMv8 and POWER hardware memory models, by using the IMM (intermediate memory model) [2], a recently proposed model that abstracts over details of the hardware models.
+</p>
+<br>
+
+<h5 id="scalas">Alceste Scalas:	Effpi: Verified Message-Passing Programs in Dotty</h5>
+<p>
+  I will talk about Effpi: an experimental toolkit for strongly-typed concurrent and distributed programming in Dotty (a.k.a. the future Scala 3 programming language), with verification capabilities based on type-level model checking.  Effpi's key ingredient is a novel blend of behavioural types (from pi-calculus theory) infused with dependent function types (from Dotty). Effpi addresses one of the main challenges in developing and maintaining concurrent programs: many concurrency errors (like protocol violations, deadlocks, livelocks) are often spotted late, at run-time, when applications are tested or (worse) deployed in production.  Effpi aims at finding such problems early, when programs are written and compiled, through a lightweight verification approach that integrates with Dotty and its toolchain. Effpi provides: (1) a set of Dotty classes for describing communication protocols as types; (2) an embedded DSL for concurrent programming, with process-based and actor–based abstractions; (3) a Dotty compiler plugin to verify whether protocols and programs enjoy desirable properties, such as deadlock-freedom; and (4) an efficient run-time system for executing Effpi’s DSL-based programs. The combination of (1) and (2) allows the Dotty compiler to check whether an Effpi program implements a desired protocol/type; and this, together with (3), means that many typical concurrent programming errors are found and ruled out at compile-time. Further, (4) allows to run highly concurrent Effpi programs with millions of interacting processes/actors, by scheduling them on a limited number of CPU cores. In this talk, I will provide an overview of Effpi, and its theoretical foundations; then, I will discuss its future developments.
+</p>
+<br>
+
+<h5 id="doherty">Simon Doherty:	TBD</h5>
+<p>
+  TBD
+</p>
+<br>
+
+<h5 id="boureanu">Ioana Boureanu: TBD</h5>
+<p>
+  TBD
+</p>
+<br>
+
+<h5 id="gardner">Philippa Gardner: TaDA Live: Compositional Reasoning for Termination of Fine-grained Concurrent Programs</h5>
+<p>
+We introduce TaDA Live, a separation logic for reasoning compositionally about the termination of fine-grained concurrent programs. We illustrate the subtlety of our reasoning using a spin lock and a CLH lock, and prove soundness. 
+</p>
+<br>
+
+<h5 id="watt">Conrad Watt: Mending JavaScript's Relaxed Memory Model</h5>
+<p>
+Threads and shared memory have been introduced to JavaScript, and the JavaScript specification now includes an axiomatic relaxed memory model. We discuss interesting characteristics of the JavaScript model in comparison to C/C++, such as its mixed-size nature and lack of undefined behaviour. We detail our discovery and correction of several flaws in the model, including a violation of the SC-DRF property promised by the specification. We also discuss our verification efforts with respect to the corrected model.
+</p>
+<br>
+
+<h5 id="xiong">Shale Xiong: TBD</h5>
+<p>
+TBD
+</p>
+<br>
+
+<h5 id="dupressoir">Francois Dupressoir: TBD</h5>
+<p>
+TBD
+</p>
