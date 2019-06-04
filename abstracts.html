@@ -64,12 +64,14 @@ The problem of giving a formal semantics for a weak memory model of a high-level
 <h5 id="scalas">Alceste Scalas:	Effpi: Verified Message-Passing Programs in Dotty</h5>
 <p>
   I will talk about Effpi: an experimental toolkit for strongly-typed concurrent and distributed programming in Dotty (a.k.a. the future Scala 3 programming language), with verification capabilities based on type-level model checking.  Effpi's key ingredient is a novel blend of behavioural types (from pi-calculus theory) infused with dependent function types (from Dotty). Effpi addresses one of the main challenges in developing and maintaining concurrent programs: many concurrency errors (like protocol violations, deadlocks, livelocks) are often spotted late, at run-time, when applications are tested or (worse) deployed in production.  Effpi aims at finding such problems early, when programs are written and compiled, through a lightweight verification approach that integrates with Dotty and its toolchain. Effpi provides: (1) a set of Dotty classes for describing communication protocols as types; (2) an embedded DSL for concurrent programming, with process-based and actor–based abstractions; (3) a Dotty compiler plugin to verify whether protocols and programs enjoy desirable properties, such as deadlock-freedom; and (4) an efficient run-time system for executing Effpi’s DSL-based programs. The combination of (1) and (2) allows the Dotty compiler to check whether an Effpi program implements a desired protocol/type; and this, together with (3), means that many typical concurrent programming errors are found and ruled out at compile-time. Further, (4) allows to run highly concurrent Effpi programs with millions of interacting processes/actors, by scheduling them on a limited number of CPU cores. In this talk, I will provide an overview of Effpi, and its theoretical foundations; then, I will discuss its future developments.
+  <br>
+  Joint work with Nobuko Yoshida and Elias Benussi
 </p>
 <br>
 
-<h5 id="doherty">Simon Doherty:	TBD</h5>
+<h5 id="doherty">Simon Doherty:	Local Data-race Freedom and the C11 Memory Model</h5>
 <p>
-  TBD
+It is still unclear what the semantics of C11's sequentially consistent (SC) operations should be. We examine the SC semantics of Lahav et al in the light of local data-race freedom (LDRF), a generalisation of data-race freedom recently proposed by Dolan at al. Roughly, an LDRF semantics guarantees that race-free regions of a program exhibit sequentially consistent semantics, even when occurring within a larger racy program. We show that the existing C11 SC semantics are too weak to satisfy a desirable LDRF property. We present a natural strengthening of the existing semantics that does provide such a guarantee. We define a compilation strategy for this semantics that uses the IMM intermediate memory model of Podkopaev at al, and prove this strategy correct. This compilation strategy is stronger and likely less efficient than the standard proposals. Therefore, we explore more efficient compilation strategies for the widely deployed TSO and Arm v8 memory models.
 </p>
 <br>
 
@@ -85,7 +87,7 @@ We introduce TaDA Live, a separation logic for reasoning compositionally about t
 </p>
 <br>
 
-<h5 id="watt">Conrad Watt: Mending JavaScript's Relaxed Memory Model</h5>
+<h5 id="watt">Conrad Watt and Guillaume Barbier: Mending JavaScript's Relaxed Memory Model</h5>
 <p>
 Threads and shared memory have been introduced to JavaScript, and the JavaScript specification now includes an axiomatic relaxed memory model. We discuss interesting characteristics of the JavaScript model in comparison to C/C++, such as its mixed-size nature and lack of undefined behaviour. We detail our discovery and correction of several flaws in the model, including a violation of the SC-DRF property promised by the specification. We also discuss our verification efforts with respect to the corrected model.
 </p>
