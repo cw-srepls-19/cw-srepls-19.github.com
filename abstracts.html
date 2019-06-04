@@ -88,9 +88,11 @@ It is still unclear what the semantics of C11's sequentially consistent (SC) ope
 </p>
 <br>
 
-<h5 id="boureanu">Ioana Boureanu: TBD</h5>
+<h5 id="boureanu">Ioana Boureanu: Symbolic Verification of Epistemic Properties in Programs</h5>
 <p>
-  TBD
+  In this talk, we will look at one approach to make the model checking of certain privacy-encoding properties in simple programs more efficient. Concretely, we target knowledge-intrinsic properties over the states of a program, such as “a program-observer knows that variable x is equal to y + 5”.  To formalise these, we introduce a  “program-epistemic” logic, in which we can express statements like: if command/program C starts at a state satisfying φ, then in all states where the execution of C finishes, agent A is epistemically unaware of π. In the latter, π is a formula which can contain several knowledge/epistemic operators scoping quantifier-free first-order formulae. We show that, in some cases and for simple programs, model checking this logic can be reduced to SMT-solving.  Lastly, we report our experimental results which show that this technique significantly outperforms epistemic model checking.
+  <br>
+    Based on joint work with Nikos Gorogiannis and Franco Raimondi, published at IJCAI2017
 </p>
 <br>
 
