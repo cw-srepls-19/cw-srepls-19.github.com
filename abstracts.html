@@ -21,7 +21,7 @@ The π-calculus, viewed as a core concurrent programming language, has been used
 </p>
 <br>
 
-<h5 id="gibbons">Jeremy Gibbons: What You Needa Know About Yoneda”</h5>
+<h5 id="gibbons">Jeremy Gibbons: What You Needa Know About Yoneda</h5>
 <p>The Yoneda Lemma has been called “the most important result in category theory”. Its formal presentation is impressively concise, but can also be daunting. In fact, it has a number of very practical applications, such as: proofs by indirect inequality; accumulating parameters in list functions; closure conversion and continuation-passing style; and even artificial intelligence, philosophy, and art. I will sketch these applications, without getting into too much category theory. (This talk is based on the introduction to my ICFP 2018 paper with Guillaume Boisseau, which is mostly about another application, to profunctor optics; but I won’t discuss that application here.)
   <br>
 
@@ -36,7 +36,7 @@ The π-calculus, viewed as a core concurrent programming language, has been used
   Linear types, derived from Girard's Linear Logic, provide a means to expose safeinterfaces to stateful protocols and language features, e.g. channels and filehandles. Data is delineated into two camps: unconstrained values which can beconsumed or discarded arbitrarily and 'resources' which must be used exactlyonce. Bounded Linear Logic (BLL) [1], allows tracking a more nuanced notion ofnonlinearity via the natural numbers semiring which is baked into its proofrules. Our system of Graded Modal Types generalises BLL by parameterising overthe resource algebra, thus allowing a wide array of analyses to be captured inthe type system.In this talk we will explore how graded modal types and linearity convenientlyextend our typical toolkit of parametric polymorphism and indexed types,allowing us to reason about pure and effectful programs in a novel,resource-oriented, manner. Session typed channels and mutable arrays are justtwo examples of programming idioms that can be provided in such a languagewithout having to give up safety and compositionality. We will see this inaction via Granule [2], our implementation of a functional language with a typesystem which supports all these features. <br>
  
 1. Girard, Scedrov, Scott (1992) <br>
-2. https://github.com/granule-project/granule"
+2. <a href="https://github.com/granule-project/granule">Project page</a>
 </p>
 <br>
 
