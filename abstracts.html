@@ -21,8 +21,13 @@ The π-calculus, viewed as a core concurrent programming language, has been used
 </p>
 <br>
 
-<h5 id="gibbons">Jeremy Gibbons: TBD</h5>
-<p>TBD</p>
+<h5 id="gibbons">Jeremy Gibbons: What You Needa Know About Yoneda”</h5>
+<p>The Yoneda Lemma has been called “the most important result in category theory”. Its formal presentation is impressively concise, but can also be daunting. In fact, it has a number of very practical applications, such as: proofs by indirect inequality; accumulating parameters in list functions; closure conversion and continuation-passing style; and even artificial intelligence, philosophy, and art. I will sketch these applications, without getting into too much category theory. (This talk is based on the introduction to my ICFP 2018 paper with Guillaume Boisseau, which is mostly about another application, to profunctor optics; but I won’t discuss that application here.)
+  <br>
+
+    <a href="http://www.cs.ox.ac.uk/publications/publication12072-abstract.html">Link to paper and video presentation.</a>
+    
+</p>
 
 <br>
 
@@ -65,7 +70,15 @@ The problem of giving a formal semantics for a weak memory model of a high-level
 <p>
   I will talk about Effpi: an experimental toolkit for strongly-typed concurrent and distributed programming in Dotty (a.k.a. the future Scala 3 programming language), with verification capabilities based on type-level model checking.  Effpi's key ingredient is a novel blend of behavioural types (from pi-calculus theory) infused with dependent function types (from Dotty). Effpi addresses one of the main challenges in developing and maintaining concurrent programs: many concurrency errors (like protocol violations, deadlocks, livelocks) are often spotted late, at run-time, when applications are tested or (worse) deployed in production.  Effpi aims at finding such problems early, when programs are written and compiled, through a lightweight verification approach that integrates with Dotty and its toolchain. Effpi provides: (1) a set of Dotty classes for describing communication protocols as types; (2) an embedded DSL for concurrent programming, with process-based and actor–based abstractions; (3) a Dotty compiler plugin to verify whether protocols and programs enjoy desirable properties, such as deadlock-freedom; and (4) an efficient run-time system for executing Effpi’s DSL-based programs. The combination of (1) and (2) allows the Dotty compiler to check whether an Effpi program implements a desired protocol/type; and this, together with (3), means that many typical concurrent programming errors are found and ruled out at compile-time. Further, (4) allows to run highly concurrent Effpi programs with millions of interacting processes/actors, by scheduling them on a limited number of CPU cores. In this talk, I will provide an overview of Effpi, and its theoretical foundations; then, I will discuss its future developments.
   <br>
-  Joint work with Nobuko Yoshida and Elias Benussi
+    Joint work with Nobuko Yoshida and Elias Benussi.
+
+    <br> 
+      <ul>
+	<li> <a href="www.doc.ic.ac.uk/~ascalas/tmp/pldi19/papers/effpi-tool-paper-draft.pdf">
+	    Brief tool paper with an overview</a></li>
+	<li> <a href="http://mrg.doc.ic.ac.uk/publications/verifying-message-passing-programs-with-dependent-behavioural-types/pldi19-preprint.pdf"> Paper accepted at PLDI 2019</a></li>
+	<li> <a href="https://www.doc.ic.ac.uk/~ascalas/tmp/pldi19/">Temporary webpage</a></li>
+      </ul>
 </p>
 <br>
 
