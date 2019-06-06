@@ -98,7 +98,9 @@ It is still unclear what the semantics of C11's sequentially consistent (SC) ope
 
 <h5 id="gardner">Philippa Gardner: TaDA Live: Compositional Reasoning for Termination of Fine-grained Concurrent Programs</h5>
 <p>
-We introduce TaDA Live, a separation logic for reasoning compositionally about the termination of fine-grained concurrent programs. We illustrate the subtlety of our reasoning using a spin lock and a CLH lock, and prove soundness. 
+Scalable reasoning for fine-grained concurrent programs interacting with shared memory is a fundamental, open research problem. The Concurrent Separation Logics line of work achieved great compositionality for partial correctness. We have comparatively little understanding of compositional reasoning about progress (liveness) properties: that is, something good eventually happens (e.g. termination, deadlock-freedom). Yet, the intricacies of the design of concurrent programs often arise precisely from the need to make the program correct with respect to progress properties.
+
+We introduce TaDA Live, a compositional separation logic for reasoning about the termination of fine-grained concurrent programs. In this talk, we will explain the design of TaDA Live total specifications and verification through examples. We will demonstrate that our specifications are expressive, concise, abstract, and atomic. To show they are also useful, we will give an overview of a verification system that uses these specifications. The proof system achieves compositionality by introducing a number of innovations: ghost state for liveness, modular deadlock detection and thread-local liveness reasoning.
 </p>
 <br>
 
