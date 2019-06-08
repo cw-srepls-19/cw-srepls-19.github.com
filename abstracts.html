@@ -11,7 +11,7 @@
 <p>
 Transaction commit protocols play a pivotal role in supporting scalability and availability guarantees of today's large-scale transactional databases. Their theoretical properties are traditionally captured and analysed through Atomic Commitment Problem (ACP), introduced by Gray in the early 70s. Roughly, ACP is concerned with ensuring all-or-nothing (atomicity) semantics for transactions (the 'A' in the famous ACID acronym). It is formulated as a one-shot agreement problem in which a single COMMIT or ABORT decision must be output for a given transaction depending on the COMMIT or ABORT votes provided by a collection of fail-prone sites holding the data objects involved in the transaction. We argue that ACP is too simplistic to adequately capture complexities of transaction commit in modern transactional data stores.  In particular, its one-shot nature ignores the fact that a decision to commit or abort an individual transaction is not taken in isolation, but rather influenced by how conflicts with other simultaneously executing transactions are handled by the concurrency control mechanism, which ensures the isolation of transactions - 'I' in ACID. The lack of a formal framework capturing such intricate interdependencies between mechanisms for atomicity and isolation in real-world databases makes it difficult to understand them and prove correct. We address this by proposing a new problem, called Transaction Certification Service (TCS), that formalises how the classical Two-Phase Commit (2PC) protocol interacts with concurrency control in many practical transaction processing systems in a way parametric in the isolation level provided. In contrast to ACP, TCS is a multi-shot problem in the sense that the outcome of a transaction must be justified by the entire history of the past transactions rather than a single set of input votes. We then use TCS to identify core algorithmic insights underlying transaction commit in several widely used transactional data stores (such as Google Spanner), and leverages these to develop a new fault-tolerant multi-shot transaction commit protocol. This protocol is theoretically optimal in terms of its time complexity, and can serve as a reference implementation for future systems. <br> 
 
-    Joint work with Alexey Gotsman, IMDEA Software Institute, Spain 
+    Joint work with Alexey Gotsman, IMDEA Software Institute, Spain.
 </p>
 <br>
 
@@ -92,15 +92,17 @@ It is still unclear what the semantics of C11's sequentially consistent (SC) ope
 <p>
   In this talk, we will look at one approach to make the model checking of certain privacy-encoding properties in simple programs more efficient. Concretely, we target knowledge-intrinsic properties over the states of a program, such as “a program-observer knows that variable x is equal to y + 5”.  To formalise these, we introduce a  “program-epistemic” logic, in which we can express statements like: if command/program C starts at a state satisfying φ, then in all states where the execution of C finishes, agent A is epistemically unaware of π. In the latter, π is a formula which can contain several knowledge/epistemic operators scoping quantifier-free first-order formulae. We show that, in some cases and for simple programs, model checking this logic can be reduced to SMT-solving.  Lastly, we report our experimental results which show that this technique significantly outperforms epistemic model checking.
   <br>
-    Based on joint work with Nikos Gorogiannis and Franco Raimondi, published at IJCAI2017
+    Joint work with Nikos Gorogiannis and Franco Raimondi, published at IJCAI2017.
 </p>
 <br>
 
-<h5 id="gardner">Philippa Gardner: TaDA Live: Compositional Reasoning for Termination of Fine-grained Concurrent Programs</h5>
+<h5 id="gardner">Emanuele D'Osualdo: TaDA Live: Compositional Reasoning for Termination of Fine-grained Concurrent Programs</h5>
 <p>
 Scalable reasoning for fine-grained concurrent programs interacting with shared memory is a fundamental, open research problem. The Concurrent Separation Logics line of work achieved great compositionality for partial correctness. We have comparatively little understanding of compositional reasoning about progress (liveness) properties: that is, something good eventually happens (e.g. termination, deadlock-freedom). Yet, the intricacies of the design of concurrent programs often arise precisely from the need to make the program correct with respect to progress properties.
 
 We introduce TaDA Live, a compositional separation logic for reasoning about the termination of fine-grained concurrent programs. In this talk, we will explain the design of TaDA Live total specifications and verification through examples. We will demonstrate that our specifications are expressive, concise, abstract, and atomic. To show they are also useful, we will give an overview of a verification system that uses these specifications. The proof system achieves compositionality by introducing a number of innovations: ghost state for liveness, modular deadlock detection and thread-local liveness reasoning.
+<br>
+  Joint work with Julian Sutherland, Azadeh Farzan and Philippa Gardner.
 </p>
 <br>
 
@@ -110,9 +112,13 @@ Threads and shared memory have been introduced to JavaScript, and the JavaScript
 </p>
 <br>
 
-<h5 id="xiong">Shale Xiong: TBD</h5>
+<h5 id="xiong">Shale Xiong: Data Consistency in Transactional Storage Systems: A
+Centralised Approach</h5>
 <p>
-TBD
+  Modern distributed databases weaken data consistency guarantees to allow for faster transaction processing. It poses several challenges: formalising user-observable behaviour; then verifying protocols of databases and reasoning about client applications. We abstract such databases to centralised multi-version key-value stores and client views which provide partial information about such stores. We propose an operational semantics that is parametric in the notion of execution test, which determines if a client with a given view is allowed to commit a transaction. Different execution tests give rise to different consistency models, which are equivalent to the declarative consistency models defined in the literature. Using our semantics, we prove the correctness of distributed protocols and analyse the robustness of simple client applications.
+  <br>
+    Joint with Andrea Cerone, Azalea Raad and Philippa Gardner.
+    
 </p>
 <br>
 
