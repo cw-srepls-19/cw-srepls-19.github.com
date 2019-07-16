@@ -150,8 +150,18 @@ In this talk I will present a work in progress tool for simulating relaxed memor
 
   <br>--->
 
-      <h5 id="gomes">Victor Gomes: TBD</h5>
+      <h5 id="gomes">Victor Gomes: A Conflict Free Replicated Tree with Move Operations</h5>
   <p>
-    TBD
+    Replicated tree data structures are found in distributed filesystems. These
+systems need to support a move operation that allows a subtree to be moved to a
+new location within the tree. Such a move operation is easy to implement in a
+centralised system, e.g. with a designated primary replica, but it is difficult
+in settings where different replicas can concurrently perform arbitrary move
+operations. We present an algorithm (with a highly-available move operation)
+that handles arbitrary concurrent modifications on trees, while ensuring that
+the tree structure remains valid (in particular, no cycles are introduced), and
+guaranteeing that all replicas eventually converge towards the same consistent
+state. We formally prove the correctness of our algorithm using the
+Isabelle/HOL interactive proof assistant.
   </p>
 
