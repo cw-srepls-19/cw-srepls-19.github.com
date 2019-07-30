@@ -157,10 +157,18 @@ guaranteeing that all replicas eventually converge towards the same consistent
 state. We formally prove the correctness of our algorithm using the
 Isabelle/HOL interactive proof assistant.
   </p>
+  <br />
 
 
       <h5 id="hobor">Aquinas Hobor: Mechanized Verification of Graph-Manipulating Programs</h5>
   <p>
 We develop powerful and general techniques to mechanically verify realistic programs that manipulate heap-represented graphs. These graphs can exhibit well-known organization principles, such as being a DAG (acyclic) or a disjoint-forest; alternatively, these graphs can be totally unstructured. The common thread for such structures is that they exhibit deep intrinsic sharing and can be expressed using the language of graph theory. We construct a modular and general setup for reasoning about abstract mathematical graphs and use separation logic to define how such abstract graphs are represented concretely in the heap. We develop a Localize rule that enables modular reasoning about such programs, and show how this rule can support existential quantifiers in postconditions and smoothly handle modified program variables. We demonstrate the generality and power of our techniques by integrating them into the Verified Software Toolchain and certifying the correctness of six graph-manipulating programs written in CompCert C, including a 400-line generational garbage collector for the CertiCoq project. While doing so, we identify two places where the semantics of C is too weak to define generational garbage collectors of the sort used in the OCaml runtime. Our proofs are entirely machine-checked in Coq.
   </p>
+
+  <br />
+
+<h5 id="pichon">Cerberus-BMC: a Principled Reference Semantics and Exploration Tool for Concurrent and Sequential C</h5>
+  <p>
+C remains central to our infrastructure, making verification of C code an essential and much-researched topic, but the semantics of C is remarkably complex, and important aspects of it are still unsettled, leaving programmers and verification tool builders on shaky ground. This paper describes a tool, Cerberus-BMC, that for the first time provides a principled reference semantics that simultaneously supports (1) a choice of concurrency memory model (including substantial fragments of the C11, RC11, and Linux Kernel memory models), (2) a modern memory object model, and (3) a well-validated thread-local semantics for a large fragment of the language. The tool should be useful for C programmers, compiler writers, verification tool builders, and members of the C/C++ standards committees.
+</p>
 
